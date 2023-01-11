@@ -1,0 +1,5 @@
+code --install-extension dsznajder.es7-react-js-snippets
+code --install-extension eamodio.gitlens
+code --install-extension esbenp.prettier-vscode
+code --install-extension hnw.vscode-auto-open-markdown-preview
+code --install-extension vscodevim.vim

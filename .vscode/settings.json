@@ -1,0 +1,27 @@
+{
+  "files.autoSave": "afterDelay",
+  "explorer.confirmDelete": false,
+  "workbench.startupEditor": "none",
+  "extensions.ignoreRecommendations": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "files.associations": { "*html": "html" },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.title": "${activeEditorMedium}",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#323232",
+    "statusBar.noFolderBackground": "#212121",
+    "statusBar.debuggingBackground": "#263238"
+  },
+  "editor.tabSize": 2,
+  "explorer.confirmDragAndDrop": false
+}
