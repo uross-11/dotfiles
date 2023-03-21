@@ -74,6 +74,12 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-dark+)
 (set-face-attribute 'default nil :height 160)
-(add-to-list 'default-frame-alist '(fullscreen . fullboth))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+(add-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+(setq fancy-splash-image (concat doom-user-dir "vscode.png"))
+(with-eval-after-load 'git-timemachine
+  (evil-make-overriding-map git-timemachine-mode-map 'normal)
+  ;; force update evil keymaps after git-timemachine-mode loaded
+  (add-hook 'git-timemachine-mode-hook #'evil-normalize-keymaps))
