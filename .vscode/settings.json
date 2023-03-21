@@ -23,5 +23,6 @@
     "statusBar.debuggingBackground": "#263238"
   },
   "editor.tabSize": 2,
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "keyboard.dispatch": "keyCode" // remapped esc-caps lock bug linux
 }
