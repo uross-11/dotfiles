@@ -1,28 +1,35 @@
 {
+  // General settings
   "files.autoSave": "afterDelay",
+  "files.associations": { "*html": "html" },
   "explorer.confirmDelete": false,
-  "workbench.startupEditor": "none",
+  "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
+  "window.title": "${activeEditorMedium}",
+  "workbench.startupEditor": "none",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // Text editing and formatting
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  "editor.tabSize": 2,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
   "emmet.triggerExpansionOnTab": true,
-  "files.associations": { "*html": "html" },
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
   "diffEditor.ignoreTrimWhitespace": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "window.title": "${activeEditorMedium}",
+
+  // Theme settings
   "workbench.colorCustomizations": {
     "statusBar.background": "#323232",
     "statusBar.noFolderBackground": "#212121",
     "statusBar.debuggingBackground": "#263238"
   },
-  "editor.tabSize": 2,
-  "explorer.confirmDragAndDrop": false,
+
+  // Specific stuff
   "keyboard.dispatch": "keyCode" // remapped esc-caps lock bug linux
 }
