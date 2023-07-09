@@ -15,6 +15,9 @@ require("formatter").setup({
     typescriptreact = {
       require("formatter.filetypes.typescriptreact").prettierd,
     },
+    c = {
+      require("formatter.filetypes.c").clangformat,
+    },
     ["*"] = {
       require("formatter.filetypes.any").remove_trailing_whitespace,
     },
