@@ -6,3 +6,9 @@ code --install-extension vscodevim.vim
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension Prisma.prisma
 code --install-extension bradlc.vscode-tailwindcss
+code --install-extension GraphQL.vscode-graphql
+code --install-extension GraphQL.vscode-graphql-syntax
+code --install-extension ms-vscode.cpptools
+code --install-extension ms-vscode.makefile-tools
+code --install-extension ritwickdey.LiveServer
+code --install-extension wayou.vscode-todo-highlight
