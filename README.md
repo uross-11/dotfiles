@@ -5,3 +5,5 @@
 - add install scripts
 - install necessary apps
 - license
+- readme
+- description
