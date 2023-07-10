@@ -1,0 +1,13 @@
+window:
+  padding:
+    x: 10
+    y: 10
+  startup_mode: Maximized
+
+font:
+  size: 17
+
+# colors:
+#   primary:
+#     background: '0x121121'
+
