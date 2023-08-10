@@ -1,5 +1,5 @@
 local config = {
-    fps = 100,
+    fps = 1,
     name = 'slide',
 }
 

@@ -31,7 +31,7 @@ vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 
-function map(mode, lhs, rhs, opts)
+local function map(mode, lhs, rhs, opts)
 	local options = { noremap = true }
 	if opts then
 		options = vim.tbl_extend("force", options, opts)
