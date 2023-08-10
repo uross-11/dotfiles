@@ -9,17 +9,6 @@
  '(warning-suppress-log-types '((initialization) (defvaralias)))
  '(warning-suppress-types
    '((initialization)
-     (initialization)
-     (initialization)
-     (initialization)
-     (initialization)
-     (initialization)
-     (initialization)
-     (initialization)
-     (initialization)
-     (initialization)
-     (initialization)
-     (initialization)
      (defvaralias))))
 (custom-set-faces
  '(blamer-face ((t :foreground "#7a88cf" :background nil :height 140 :italic t))))
