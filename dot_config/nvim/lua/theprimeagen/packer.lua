@@ -24,13 +24,20 @@ return require("packer").startup(function(use)
 
 	-- use({ "nyoom-engineering/oxocarbon.nvim" })
 
-	-- use({
-	--   'folke/tokyonight.nvim',
-	--   as = 'tokyonight',
-	--   config = function()
-	--     vim.cmd('colorscheme tokyonight')
-	--   end
+	 -- use({
+	 --   'folke/tokyonight.nvim',
+	 --   as = 'tokyonight',
+	 --   config = function()
+	 --     vim.cmd('colorscheme tokyonight')
+	 --   end
 	-- })
+
+	-- use({
+	-- 	"projekt0n/github-nvim-theme",
+	-- 	config = function()
+	-- 		vim.cmd("colorscheme github_dark")
+	-- 	end,
+	-- }) -- })
 
 	use({
 		"folke/trouble.nvim",
