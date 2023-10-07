@@ -5,5 +5,9 @@ window:
   startup_mode: Maximized
 
 font:
-  size: 20
+  size: 18
 
+# colors:
+#   primary:
+#     background: "0x191724"
+#     foreground: "0xe0def4"
