@@ -5,7 +5,11 @@ vim.keymap.set("n", "<leader>ps", function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 vim.keymap.set("n", "<leader>vh", builtin.help_tags, {})
-vim.keymap.set("n", "<leader>vr", builtin.lsp_references, {
+vim.keymap.set("n", "<leader>rr", builtin.lsp_references, {
+	noremap = true,
+	silent = true,
+})
+vim.keymap.set("n", "<leader>q", builtin.diagnostics, {
 	noremap = true,
 	silent = true,
 })

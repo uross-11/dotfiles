@@ -4,7 +4,7 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
 	"lua_ls",
-	"tsserver",
+	-- "tsserver",
 	"eslint",
 	"emmet_ls",
 })
@@ -22,26 +22,44 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 })
 
 -- emmet
-local lspconfig = require("lspconfig")
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-lspconfig.emmet_ls.setup({
-	capabilities = capabilities,
-	filetypes = {
-		"css",
-		"eruby",
-		"html",
-		"javascript",
-		"javascriptreact",
-		"less",
-		"sass",
-		"scss",
-		"svelte",
-		"pug",
-		"typescriptreact",
-		"vue",
-	},
-})
+-- local lspconfig = require("lspconfig")
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- capabilities.textDocument.completion.completionItem.snippetSupport = true
+-- lspconfig.emmet_ls.setup({
+-- 	capabilities = capabilities,
+-- 	filetypes = {
+-- 		"css",
+-- 		"eruby",
+-- 		"html",
+-- 		"javascript",
+-- 		"javascriptreact",
+-- 		"less",
+-- 		"sass",
+-- 		"scss",
+-- 		"svelte",
+-- 		"pug",
+-- 		"typescriptreact",
+-- 		"vue",
+-- 	},
+-- })
+
+-- local cmp_nvim_lsp = require("cmp_nvim_lsp")
+
+-- lspconfig.clangd.setup({
+-- 	on_attach = on_attach,
+-- 	capabilities = cmp_nvim_lsp.default_capabilities(),
+-- 	cmd = {
+-- 		"clangd",
+-- 		"--offset-encoding=utf-16",
+-- 	},
+-- 	filetypes = { "c", "cpp", "cxx", "cc" },
+-- 	settings = {
+-- 		["clangd"] = {
+-- 			["compilationDatabasePath"] = "build",
+-- 			["fallbackFlags"] = { "-std=c++17" },
+-- 		},
+-- 	},
+-- })
 
 cmp_mappings["<Tab>"] = nil
 cmp_mappings["<S-Tab>"] = nil

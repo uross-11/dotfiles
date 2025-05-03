@@ -9,35 +9,10 @@ return require("packer").startup(function(use)
 
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
-		-- or, branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
-		config = function()
-			vim.cmd("colorscheme rose-pine")
-		end,
-	})
-
-	-- use({ "nyoom-engineering/oxocarbon.nvim" })
-
-	 -- use({
-	 --   'folke/tokyonight.nvim',
-	 --   as = 'tokyonight',
-	 --   config = function()
-	 --     vim.cmd('colorscheme tokyonight')
-	 --   end
-	-- })
-
-	-- use({
-	-- 	"projekt0n/github-nvim-theme",
-	-- 	config = function()
-	-- 		vim.cmd("colorscheme github_dark")
-	-- 	end,
-	-- }) -- })
+  use "blazkowolf/gruber-darker.nvim"
 
 	use({
 		"folke/trouble.nvim",
@@ -55,13 +30,16 @@ return require("packer").startup(function(use)
 			ts_update()
 		end,
 	})
-	use("nvim-treesitter/playground")
+
+	-- use("nvim-treesitter/playground")
 	use("theprimeagen/harpoon")
 	use("theprimeagen/refactoring.nvim")
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
 	use("tpope/vim-commentary")
-	use("nvim-treesitter/nvim-treesitter-context")
+
+	use("github/copilot.vim")
+	use("mhartington/formatter.nvim")
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
@@ -86,26 +64,32 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	use("mhartington/formatter.nvim")
-	use("folke/zen-mode.nvim")
-	use("eandrju/cellular-automaton.nvim")
-	use("laytan/cloak.nvim")
-
+	-- use("eandrju/cellular-automaton.nvim")
+	-- use({
+	-- 	"folke/todo-comments.nvim",
+	-- 	dependencies = { "nvim-lua/plenary.nvim" },
+	-- 	config = function()
+	-- 		require("todo-comments").setup({
+	-- 			keywords = {
+	-- 				FIX = { icon = "F" },
+	-- 				TODO = { icon = "T" },
+	-- 				HACK = { icon = "H" },
+	-- 				WARN = { icon = "W" },
+	-- 				PERF = { icon = "P" },
+	-- 				NOTE = { icon = "N" },
+	-- 				TEST = { icon = "T" },
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- })
 	use({
-		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		"rose-pine/neovim",
+		as = "rose-pine",
 		config = function()
-			require("todo-comments").setup({
-				keywords = {
-					FIX = { icon = "F" },
-					TODO = { icon = "T" },
-					HACK = { icon = "H" },
-					WARN = { icon = "W" },
-					PERF = { icon = "P" },
-					NOTE = { icon = "N" },
-					TEST = { icon = "T" },
-				},
-			})
+			vim.cmd("colorscheme rose-pine")
 		end,
 	})
+	-- use("nvim-treesitter/nvim-treesitter-context")
+	-- use("folke/zen-mode.nvim")
+	-- use("laytan/cloak.nvim")
 end)
