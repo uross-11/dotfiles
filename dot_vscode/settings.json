@@ -1,5 +1,4 @@
 {
-  // General settings
   "files.autoSave": "afterDelay",
   "files.associations": { "*html": "html" },
   "explorer.confirmDelete": false,
@@ -10,7 +9,6 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
 
-  // Text editing and formatting
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "editor.fontSize": 13,
@@ -27,7 +25,6 @@
   },
   "diffEditor.ignoreTrimWhitespace": false,
 
-  // Theme settings
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.enablePreview": false,
   "workbench.colorCustomizations": {
@@ -36,6 +33,5 @@
     "statusBar.debuggingBackground": "#263238"
   },
 
-  // Specific stuff
-  "keyboard.dispatch": "keyCode" // remapped esc-caps lock bug linux
+  "keyboard.dispatch": "keyCode"
 }
