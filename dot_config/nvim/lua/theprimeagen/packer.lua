@@ -31,7 +31,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- use("nvim-treesitter/playground")
 	use("theprimeagen/harpoon")
 	use("theprimeagen/refactoring.nvim")
 	use("mbbill/undotree")
@@ -63,33 +62,4 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
-
-	-- use("eandrju/cellular-automaton.nvim")
-	-- use({
-	-- 	"folke/todo-comments.nvim",
-	-- 	dependencies = { "nvim-lua/plenary.nvim" },
-	-- 	config = function()
-	-- 		require("todo-comments").setup({
-	-- 			keywords = {
-	-- 				FIX = { icon = "F" },
-	-- 				TODO = { icon = "T" },
-	-- 				HACK = { icon = "H" },
-	-- 				WARN = { icon = "W" },
-	-- 				PERF = { icon = "P" },
-	-- 				NOTE = { icon = "N" },
-	-- 				TEST = { icon = "T" },
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- })
-	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
-		config = function()
-			vim.cmd("colorscheme rose-pine")
-		end,
-	})
-	-- use("nvim-treesitter/nvim-treesitter-context")
-	-- use("folke/zen-mode.nvim")
-	-- use("laytan/cloak.nvim")
 end)

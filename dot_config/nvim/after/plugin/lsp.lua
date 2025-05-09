@@ -21,46 +21,6 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 	["<C-Space>"] = cmp.mapping.complete(),
 })
 
--- emmet
--- local lspconfig = require("lspconfig")
--- local capabilities = vim.lsp.protocol.make_client_capabilities()
--- capabilities.textDocument.completion.completionItem.snippetSupport = true
--- lspconfig.emmet_ls.setup({
--- 	capabilities = capabilities,
--- 	filetypes = {
--- 		"css",
--- 		"eruby",
--- 		"html",
--- 		"javascript",
--- 		"javascriptreact",
--- 		"less",
--- 		"sass",
--- 		"scss",
--- 		"svelte",
--- 		"pug",
--- 		"typescriptreact",
--- 		"vue",
--- 	},
--- })
-
--- local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
--- lspconfig.clangd.setup({
--- 	on_attach = on_attach,
--- 	capabilities = cmp_nvim_lsp.default_capabilities(),
--- 	cmd = {
--- 		"clangd",
--- 		"--offset-encoding=utf-16",
--- 	},
--- 	filetypes = { "c", "cpp", "cxx", "cc" },
--- 	settings = {
--- 		["clangd"] = {
--- 			["compilationDatabasePath"] = "build",
--- 			["fallbackFlags"] = { "-std=c++17" },
--- 		},
--- 	},
--- })
-
 cmp_mappings["<Tab>"] = nil
 cmp_mappings["<S-Tab>"] = nil
 
@@ -78,25 +38,11 @@ lsp.set_preferences({
 	},
 })
 
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-local lsp_format_on_save = function(bufnr)
-	vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-	vim.api.nvim_create_autocmd("BufWritePre", {
-		group = augroup,
-		buffer = bufnr,
-		callback = function()
-			vim.lsp.buf.format()
-		end,
-	})
-end
-
 lsp.on_attach(function(_, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
-	--lsp_format_on_save(bufnr)
-
 	vim.keymap.set("n", "<leader>e", function()
-		vim.diagnostic.open_float(0, { scope = "line" })
+		vim.diagnostic.open_float(nil, { scope = "line" })
 	end, opts)
 	vim.keymap.set("n", "gd", function()
 		vim.lsp.buf.definition()
