@@ -23,19 +23,18 @@ require("formatter").setup({
     go = {
       require("formatter.filetypes.go").gofumpt,
     },
-		-- c = {
-		-- 	require("formatter.filetypes.c").clangformat,
+		c = {
+			require("formatter.filetypes.c").clangformat,
 
-		-- 	function()
-		-- 		return {
-		-- 			exe = "clang-format",
-		-- 			args = {
-		-- 				"-style=gnu",
-		-- 				util.escape_path(util.get_current_buffer_file_path()),
-		-- 			},
-		-- 		}
-		-- 	end,
-		-- },
+			-- function()
+			-- 	return {
+			-- 		exe = "clang-format",
+			-- 		args = {
+			-- 			"-style=gnu",
+			-- 		},
+			-- 	}
+			-- end,
+		},
 		["*"] = {
 			require("formatter.filetypes.any").remove_trailing_whitespace,
 		},
