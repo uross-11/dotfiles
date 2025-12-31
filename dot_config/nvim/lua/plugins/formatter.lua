@@ -1,0 +1,19 @@
+return {
+	"mhartington/formatter.nvim",
+	config = function()
+		require("formatter").setup({ -- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
+			logging = true,
+			log_level = vim.log.levels.WARN,
+			filetype = {
+				lua = { require("formatter.filetypes.lua").stylua },
+				javascript = { require("formatter.filetypes.javascript").prettierd },
+				typescript = { require("formatter.filetypes.typescript").prettierd },
+				typescriptreact = { require("formatter.filetypes.typescriptreact").prettierd },
+				html = { require("formatter.filetypes.html").prettierd },
+				go = { require("formatter.filetypes.go").gofumpt },
+				c = { require("formatter.filetypes.c").clangformat }, -- function() return { exe = "clang-format", args = { "-style=gnu", }, } end,
+				["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
+			},
+		})
+	end,
+}

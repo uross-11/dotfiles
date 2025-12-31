@@ -23,7 +23,7 @@ background = "#181818"
 foreground = "#e4e4ef"
 
 [font]
-size = 18
+size = 16
 
 [font.bold]
 style = "Regular"
